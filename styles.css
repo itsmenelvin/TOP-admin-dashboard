@@ -28,6 +28,8 @@ header{
     "top-left top-left top-left top-right top-right"
     "bottom-left bottom-left bottom-left bottom-right bottom-right"
   ;
+  background-color: #475569;
+  color: #f1f5f9;
 }
 
 header > div{
@@ -62,6 +64,7 @@ input[type='text']{
 .header-bottom-left{
   grid-area: bottom-left;
   gap: 2rem;
+  padding: 1rem;
 }
 
 .header-bottom-right{
@@ -71,12 +74,25 @@ input[type='text']{
 }
 
 .header-btn{
-  padding: 1rem 1.5rem;
+  padding: .6rem 1.3rem;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 4rem;
+  border-radius: .5rem;
   outline: none;
   border: none;
+  color: #475569;
+  position: relative;
+  border: thin solid #475569;;
+  border-bottom: 4px solid #475569;
+}
+
+
+.header-btn:hover{
+  background-color: #475569;
+  color: #f1f5f9;
+  border: thin solid #f1f5f9;;
+  border-bottom: 4px solid #f1f5f9;
+  cursor: pointer;
 }
 
 
@@ -102,9 +118,10 @@ input[type='text']{
 }
 /* navigation style and layout*/
 nav{
-  padding: 1rem 0 0 1rem;
+  padding: 1rem 1rem 0 1rem;
   grid-area: nav;
   display: grid;
+  background-color: #cbd5e1;
 }
 
 .nav-items-wrapper{
@@ -128,6 +145,15 @@ nav{
   padding: .5rem 0;
 }
 
+.top > div:hover,
+.middle > div:hover,
+.bottom > div:hover{
+  background-color: #475569;
+  color: #f1f5f9;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
 div.nav-head{
   font-size: 2rem;
   font-weight: 600;
@@ -149,12 +175,13 @@ main{
   flex-direction: column;
   padding: 1rem;
   overflow: auto;
+  background-color: #e2e8f0;
 }
 
 .card-head{
   margin: .5rem 0;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .card-container{
@@ -172,6 +199,8 @@ main{
   border: thin solid gray;
   height: auto;
   border-radius: 1rem;
+  border-left: 15px solid #475569;
+  background-color: #f1f5f9;
 }
 
 .card-icon-wrapper{
@@ -187,6 +216,15 @@ main{
   width: auto;
 }
 
+.card-icon-wrapper > img{
+  border-top: 2px solid #f1f5f9;
+}
+
+.card-icon-wrapper > img:hover{
+  cursor: pointer;
+  border-top: 2px solid #475569;
+}
+
 .card > h3{
   margin: .5rem 0;
   font-weight: 600;
@@ -195,6 +233,7 @@ main{
 .side-bar{
   grid-area: sidebar;
   padding: 1rem;
+  background-color: #e2e8f0;
 }
 
 .sidebar-container{
@@ -217,6 +256,10 @@ main{
   flex-direction: column;
   gap: .5rem;
   padding: .5rem;
+}
+
+.ann-card{
+  border-bottom: thin solid #475569;
 }
 
 .ann-card > h5, p{
@@ -244,6 +287,13 @@ main{
 .project-name{
   font-weight: 300;
   font-size: .8rem;
+}
+
+.announce-card-wrapper, 
+.trending-card-wrapper{
+  border: thin solid gray;
+  border-radius: 1rem;
+  background-color: #f1f5f9;
 }
 
 
