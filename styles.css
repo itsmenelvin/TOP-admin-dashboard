@@ -85,9 +85,10 @@ input[type='text']{
   width: auto;
 }
 
-.small-profile{
+.small-profile, .trend-card-profile {
   height: 3rem;
   width: auto;
+  border-radius: 50%;
 }
 
 .up-name{
@@ -150,8 +151,10 @@ main{
   overflow: auto;
 }
 
-main p{
-  margin: 0;
+.card-head{
+  margin: .5rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .card-container{
@@ -179,11 +182,68 @@ main p{
   gap: 2rem;
 }
 
-.card-icon {
+.card-icon{
   height: 1.5rem;
   width: auto;
 }
 
+.card > h3{
+  margin: .5rem 0;
+  font-weight: 600;
+}
+/* sidebar layout and style */
 .side-bar{
   grid-area: sidebar;
+  padding: 1rem;
 }
+
+.sidebar-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-container > div{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+}
+
+.sidebar-container > div > div{
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem;
+}
+
+.ann-card > h5, p{
+  margin: .25rem 0;
+}
+
+.ann-card h5{
+  font-weight: 500;
+}
+
+.ann-card p {
+  font-size: .8rem;
+}
+
+.trend-card{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username{
+  font-weight: 600;
+}
+
+.project-name{
+  font-weight: 300;
+  font-size: .8rem;
+}
+
+
