@@ -13,19 +13,95 @@ body{
 .container{
   display: grid;
   height: 100%;
-  grid-template: 1fr 4fr / 1fr 3fr 1fr;
+  grid-template: 1fr 4fr / 1fr 4fr 1fr;
   grid-template-areas:
     "nav header header"
     "nav main sidebar"
   ;
 }
-
+/* header style and layout*/
 header{
   grid-area: header;
+  display: grid;
+  grid-template: 2fr 3fr / repeat(5,1fr);
+  grid-template-areas: 
+    "top-left top-left top-left top-right top-right"
+    "bottom-left bottom-left bottom-left bottom-right bottom-right"
+  ;
 }
-/* navigation style */
+
+header > div{
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.header-top-left{
+  grid-area: top-left;
+  align-content: center;
+  gap: .5rem;
+}
+
+input[type='text']{
+  outline: none;
+  border: thin solid gray;
+  padding: .3rem .6rem;
+  border-radius: .5rem;
+  flex: 1;
+  color: gray;
+}
+
+.header-top-right{
+  grid-area: top-right;
+  justify-content: end;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-bottom-left{
+  grid-area: bottom-left;
+  gap: 2rem;
+}
+
+.header-bottom-right{
+  grid-area: bottom-right;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.header-btn{
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4rem;
+  outline: none;
+  border: none;
+}
+
+
+.big-profile{
+  height: 7rem;
+  width: auto;
+}
+
+.small-profile{
+  height: 3rem;
+  width: auto;
+}
+
+.up-name{
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.down-name{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+/* navigation style and layout*/
 nav{
-  padding: 1rem;
+  padding: 1rem 0 0 1rem;
   grid-area: nav;
   display: grid;
 }
@@ -65,9 +141,46 @@ img.nav-head-icon{
   justify-self:  center;
   align-items: center;
 }
-
+/* main style and layout */
 main{
   grid-area: main;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: auto;
+}
+
+main p{
+  margin: 0;
+}
+
+.card-container{
+  display: grid;
+  gap: 1rem;
+  height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
+  border: thin solid gray;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.card-icon-wrapper{
+  display: flex;
+  height: auto;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card-icon {
+  height: 1.5rem;
+  width: auto;
 }
 
 .side-bar{
