@@ -130,6 +130,7 @@ nav{
 div.nav-head{
   font-size: 2rem;
   font-weight: 600;
+  align-items: center;
 }
 
 img.nav-head-icon{
@@ -139,7 +140,6 @@ img.nav-head-icon{
 
 .center-icon{
   justify-self:  center;
-  align-items: center;
 }
 /* main style and layout */
 main{
@@ -159,6 +159,7 @@ main p{
   gap: 1rem;
   height: 100%;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-content: start;
 }
 
 .card{
@@ -186,4 +187,3 @@ main p{
 .side-bar{
   grid-area: sidebar;
 }
-
